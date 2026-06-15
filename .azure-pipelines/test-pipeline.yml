@@ -1,0 +1,16 @@
+resources:
+  repositories:
+    - repository: self
+      type: github
+      endpoint: Soar-Tech_Connection
+      name: Lexyy112/my-first-static-web-app
+
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - checkout: self
+  - script: echo "Pipeline running using existing connection"
+    displayName: "Test connection"
